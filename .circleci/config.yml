@@ -9,8 +9,8 @@
           name: "Ejecucion" 
           command: |
             echo "A first hello"
-            ls 
-            pwd -all
+            ls --all
+            pwd 
             echo "Finished"
             
 

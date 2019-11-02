@@ -15,7 +15,7 @@
             ls --all
             pwd 
             echo "Finished"
-            scp -o StrictHostKeyChecking=no ./index.html ec2-54-166-131-16.compute-1.amazonaws.com:/tmp            
+            scp -o StrictHostKeyChecking=no ./index.html ubuntu@ec2-54-166-131-16.compute-1.amazonaws.com:/tmp            
             
 
 

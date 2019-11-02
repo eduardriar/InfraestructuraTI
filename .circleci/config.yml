@@ -4,6 +4,9 @@
      docker:
        - image: circleci/openjdk
      steps:
+       - add_ssh_keys:
+          fingerprints:
+            - "87:ba:54:2b:83:c2:d6:0d:4c:01:23:09:8d:cc:2a:95"
        - checkout
        - run:
           name: "Ejecucion" 
@@ -12,5 +15,8 @@
             ls --all
             pwd 
             echo "Finished"
+            scp ./index.html ec2-54-166-131-16.compute-1.amazonaws.com:/tmp
+             
+
             
 

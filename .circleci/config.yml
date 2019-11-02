@@ -10,6 +10,7 @@
           command: |
             echo "A first hello"
             ls 
-            pwd
+            pwd -all
             echo "Finished"
+            
 

@@ -14,8 +14,7 @@
             echo "A first hello"
             ls --all
             pwd 
-            echo "Finished"
-            sudo chmod -R 777 /var/www
+            echo "Finished"              
             scp -o StrictHostKeyChecking=no ./index.html ubuntu@ec2-34-229-250-66.compute-1.amazonaws.com:/var/www/html 
                    
             

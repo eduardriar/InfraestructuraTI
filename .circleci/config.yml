@@ -4,18 +4,17 @@ jobs:
       - image: circleci/openjdk
     steps:
       - add_ssh_keys:
-        fingerprints:
-          - "87:ba:54:2b:83:c2:d6:0d:4c:01:23:09:8d:cc:2a:95"
+         fingerprints:
+           - "87:ba:54:2b:83:c2:d6:0d:4c:01:23:09:8d:cc:2a:95"
       - checkout
       - run:
-        name: "Ejecucion" 
-        command: |
-          echo "A first hello"
-          ls --all
-          pwd 
-          echo "Finished"              
-          scp -o StrictHostKeyChecking=no ./index.html ubuntu@ec2-54-160-54-237.compute-1.amazonaws.com:/mnt/sharedfolder/
- 
+         name: "Ejecucion" 
+         command: |
+           echo "A first hello"
+           ls --all
+           pwd 
+           echo "Finished"              
+           scp -o StrictHostKeyChecking=no ./index.html ubuntu@ec2-54-160-54-237.compute-1.amazonaws.com:/mnt/sharedfolder/
                    
             
 

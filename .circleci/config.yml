@@ -14,7 +14,7 @@ jobs:
            ls --all
            pwd 
            echo "Finished"              
-           scp -o StrictHostKeyChecking=no ./production/index.html ubuntu@ec2-54-160-54-237.compute-1.amazonaws.com:/mnt/sharedfolder/
+           scp -o StrictHostKeyChecking=no .circleci/production/index.html ubuntu@ec2-54-160-54-237.compute-1.amazonaws.com:/mnt/sharedfolder/
 
   "Development Environment":
     docker:
@@ -31,7 +31,7 @@ jobs:
            ls --all
            pwd 
            echo "Finished"              
-           scp -o StrictHostKeyChecking=no ./development/index.html ubuntu@ec2-3-91-2-20.compute-1.amazonaws.com:/var/www/html/  
+           scp -o StrictHostKeyChecking=no .circleci/development/index.html ubuntu@ec2-3-91-2-20.compute-1.amazonaws.com:/var/www/html/  
 
 workflows:
   version: 2

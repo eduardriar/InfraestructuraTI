@@ -15,8 +15,10 @@
             ls --all
             pwd 
             echo "Finished"              
-            scp -o StrictHostKeyChecking=no ./index.html ubuntu@ec2-54-160-54-237.compute-1.amazonaws.com:/mnt/sharedfolder/ 
+            scp -o StrictHostKeyChecking=no ./index.html ubuntu@ec2-54-160-54-237.compute-1.amazonaws.com:/mnt/sharedfolder/
 
+  workflows:
+  version: 2
   jobs:
     build:
       docker:

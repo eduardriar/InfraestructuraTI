@@ -5,7 +5,7 @@ jobs:
     steps:
       - add_ssh_keys:
          fingerprints:
-           - "87:ba:54:2b:83:c2:d6:0d:4c:01:23:09:8d:cc:2a:95"
+           - "81:88:b3:35:ef:1b:a2:1d:5a:e8:bf:b6:12:7f:a4:54"
       - checkout
       - run:
          name: "Ejecucion" 
@@ -14,7 +14,7 @@ jobs:
            ls --all
            pwd 
            echo "Finished"              
-           scp -o StrictHostKeyChecking=no .circleci/production/index.html ubuntu@ec2-54-160-54-237.compute-1.amazonaws.com:/mnt/sharedfolder/
+           scp -o StrictHostKeyChecking=no .circleci/production/index.html ubuntu@ec2-3-226-245-180.compute-1.amazonaws.com:/var/www/html
 
   "Development Environment":
     docker:
@@ -22,7 +22,7 @@ jobs:
     steps:
       - add_ssh_keys:
          fingerprints:
-           - "87:ba:54:2b:83:c2:d6:0d:4c:01:23:09:8d:cc:2a:95"
+           - "81:88:b3:35:ef:1b:a2:1d:5a:e8:bf:b6:12:7f:a4:54"
       - checkout
       - run:
          name: "Ejecucion" 
